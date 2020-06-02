@@ -9,7 +9,10 @@
  * @author itzsa
  */
 public class Game extends javax.swing.JFrame {
-
+    int st = 1;
+    int sc = 3;
+    int p = 2;
+    int choice;
     /**
      * Creates new form Game
      */
@@ -145,15 +148,11 @@ public class Game extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-              
-                int st = 1;
-                int sc = 2;
-                int p = 3;
-                int choice = 0;
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // Stone button
-        int choice = 1;
+         choice = 1;
+         verify(choice);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
@@ -166,28 +165,31 @@ public class Game extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // Scissors button
-        int choice = 2;
-        
+        choice = 2;
+        verify(choice);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // Paper button
-        int choice = 3;
+        choice = 3;
+        verify(choice);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
         // Information Bar
-        if (choice == st){
-        jTextField3.setText("Entered Stone");
-    }
-        else if (choice == sc){
+    }//GEN-LAST:event_jTextField3ActionPerformed
+    
+    public void verify(int ch){
+        if (ch == st){
+            jTextField3.setText("Entered Stone");
+         }
+        else if (ch == sc){
             jTextField3.setText("Entered Scissors");
         }
-        else if (choice == p){
+        else if (ch == p){
             jTextField3.setText("Entered Paper");
-        }
-    }//GEN-LAST:event_jTextField3ActionPerformed
-
+        }   
+    }
     /**
      * @param args the command line arguments
      */
